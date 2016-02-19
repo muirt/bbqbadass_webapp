@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="user-scalable=0"/>	
+	<link rel="stylesheet" type="text/css"  media='all and (orientation:portrait)' href="badass-recording.css" />
+	<link rel="stylesheet" type="text/css" media='all and (orientation:landscape)' href="badass-recording-landscape.css" /> 
+	
+</head>
+
+<body>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<script language="javascript" type="text/javascript" src="flot/jquery.flot.js"></script>
+	<script type="text/javascript" src="badass-recording.js"></script>  	
+
+	<!-- SLIDEOUTS -->
+	<div class="slideout" id="slideout_current_recording">
+		<h3>
+			<div  class="slideout_header_label">Current Recording</div> 
+			<a class="toggle"><</a>
+		</h3>
+		<div id="current_recording_details">
+			<div id="current_recording_name_label">Name</div>
+			<div id="current_recording_name">Brisket</div>
+			<div id="current_recording_duration_label">Duration</div>
+			<div id="current_recording_duration">10h43m</div>
+			<div id="current_recording_graph_button_div">
+				<button id="current_recording_graph_button">
+					<span id="current_recording_graph_button_text">Graph</span>
+				</button>
+			</div>	
+			<div id="current_recording_finish_button_div">
+				<button id="current_recording_finish_button">
+					<span id="current_recording_finish_button_text">Finish</span>
+				</button>
+			</div>
+			<div id="current_recording_delete_button_div">	
+				<button id="current_recording_delete_button">
+					<span id="current_recording_delete_button_text">Delete</span>
+				</button>
+			</div>	
+		</div>
+		<div id="no_current_recording">
+			<div id="no_current_recording_label">No Current Recording</div>
+		</div>	
+	</div>
+	
+	<div class="slideout" id="slideout_new_recording">
+		<h3>
+			<div  class="slideout_header_label">New Recording</div> 
+			<a class="toggle"><</a>
+		</h3>
+		<div id="new_recording_name_label">Name</div>
+		<input type="text" id="new_recording_name_input" value=""/>	
+		<button id="new_recording_start_button">
+			<span id="new_recording_start_button_text">Start</span>
+		</button>			
+	</div>
+	
+	<div class="slideout" id="slideout_show_saved_recordings">
+		<h3>
+			<div  class="slideout_header_label">Saved Recordings</div> 
+			<a class="toggle"><</a>
+		</h3>	
+		<ul id="saved_recordings_list">			
+			<li><a id="saved_recordings_empty">No Saved Recordings</a></li>
+		</ul>	
+		
+	</div>
+
+	<div class="slideout" id="slideout_saved_recording">
+		<h3>
+			<div  class="slideout_header_label">Saved Recording</div> 
+			<a class="toggle"><</a>
+		</h3>	
+		<div id="current_recording_details">
+			<div id="saved_recording_name_label">Name</div>
+			<div id="saved_recording_name">Brisket</div>
+			<div id="saved_recording_duration_label">Duration</div>
+			<div id="saved_recording_duration">10h43m</div>
+			<div id="saved_recording_date_label">Date</div>
+			<div id="saved_recording_date"></div>					
+			<div id="saved_recording_graph_button_div">
+				<button id="saved_recording_graph_button">
+					<span id="saved_recording_graph_button_text">Graph</span>
+				</button>
+			</div>				
+			<div id="saved_recording_delete_button_div">	
+				<button id="saved_recording_delete_button">
+					<span id="saved_recording_delete_button_text">Delete</span>
+				</button>
+			</div>	
+		</div>
+	</div>
+
+	<div class="slideout" id="slideout_graph">
+		
+		<h3>
+			<div id="graph_legend"></div>
+			<a class="toggle"><</a>
+			
+		</h3>
+		
+		<div class="demo-container">
+			<div id="placeholder" class="demo-placeholder"></div>
+		</div>	
+		
+			
+	</div>
+	
+	<div class="slideout" id="slideout_confirm">
+		<h3>
+			<div  class="slideout_header_label">Confirm</div> 
+			<a class="toggle"><</a>
+		</h3>
+		<div id="confirm_yes_label">Yes</div>
+		<div id="confirm_no_label">No</div>	
+	</div>
+	
+	
+	<!-- MAIN SCREEN -->
+	<div id="header">
+		<div id="header_logo">BBQ Boss</div>
+		<button id="back_button">
+			<span id="back_button_text">Back</span>
+		</button>	
+	</div>
+	<!--
+	<div id="connected">
+		<div id="connected_label">Not Connected</div>
+	</div>	
+	-->
+	
+	<div id="recording_options">
+		<div id="recording_menu_header">
+			<div id="recording_menu_header_text">Recording</div>	
+		</div>
+		<div id="current_recording">Current Recording </div>
+		<div id="new_recording">New Recording </div>
+		<div id="saved_recording">Saved Recordings</div>		
+	</div>
+	
+	<div id="debug_string"></div>
+</body>
+</html>

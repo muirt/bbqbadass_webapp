@@ -1,0 +1,792 @@
+html {
+    height: 100%;
+}
+
+body{
+
+	height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	-webkit-touch-callout: none !important;
+
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #111), color-stop(1, #333));	
+	background:-moz-linear-gradient(top, #111 5%, #333 100%);	
+	background:-webkit-linear-gradient(top, #111 5%, #333 100%);	
+	background:-o-linear-gradient(top, #111 5%, #333 100%);	
+	background:-ms-linear-gradient(top, #111 5%, #333 100%);	
+	background:linear-gradient(to bottom, #111 5%, #333 100%);	
+
+	-webkit-user-select: none !important; 
+}
+
+path { -webkit-user-select: none !important; }
+
+div{
+	color: white;
+	-webkit-user-select: none !important;
+	
+	font-family: Arial;
+}
+
+button{
+	-moz-border-radius:3vw;	
+	-webkit-border-radius:3vw;
+	border-radius:3vw;	
+	//border:0.3vw solid #ffffff;
+	color: #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #DD2929), color-stop(1, #DD9999));	
+	background:-moz-linear-gradient(top, #DD2929 5%, #DD9999 100%);	
+	background:-webkit-linear-gradient(top, #DD2929 5%, #DD9999 100%);	
+	background:-o-linear-gradient(top, #DD2929 5%, #DD9999 100%);	
+	background:-ms-linear-gradient(top, #DD2929 5%, #DD9999 100%);	
+	background:linear-gradient(to bottom, #DD2929 5%, #DD9999 100%);
+	text-align: center;
+	font-size: 8vw;
+	font-family: Arial;
+	padding: 0px;
+	font-weight: bold;
+}
+
+#header
+{
+	position: fixed;
+	top:0;
+	left:0;
+	height: 15%;
+	width: 100%;
+	float: left;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #111188), color-stop(1, #1111DD));	
+	background:-moz-linear-gradient(top, #111188 5%, #1111DD 100%);	
+	background:-webkit-linear-gradient(top, #111188 5%, #1111DD 100%);	
+	background:-o-linear-gradient(top, #1111DD 5%, #1111DD 100%);	
+	background:-ms-linear-gradient(top, #1111DD 5%, #1111DD 100%);	
+	background:linear-gradient(to bottom, #111188 5%, #1111DD 100%);
+}
+#header_logo
+{
+	position: relative;
+	top: 30%;
+	left: 5%;
+	width: 70%;
+	height: 15%;
+	float:left;
+	font-size: 11vw;
+	color: white;
+	font-family: arial;
+	
+}
+
+
+#back_button
+{	
+	position: relative;
+	top: 15%;
+	left: 1%;	
+	float: left;
+	height: 70%;
+	width: 27%;	
+	text-align: center;	
+		
+}	
+
+#back_button:active
+{
+	position:relative;	
+	top:15%;	
+}
+
+
+#connected
+{
+	
+	position: fixed;	
+	top: 15%;
+	left: 0%;
+	float: left;
+	height: 8%;
+	width: 100%;
+	border-bottom: 0.25vw solid #fff;
+	
+}
+
+#connected_label
+{
+	position: relative;	
+	top: 5%;
+	left: 0%;
+	text-align: center;
+	font-size: 8vw;
+	font-family: arial;
+	color: red;
+}
+
+#recording_options
+{
+	position: fixed;	
+	top: 15%;
+	left: 0%;
+	height: 80%	
+}
+
+#recording_menu_header 
+{
+	position: relative;	
+	top: 0%;
+	left: 0%;	
+	float:left;
+	width: 100%;
+	height: 19%;
+	border-bottom: 0.25vw solid #fff;	
+}
+
+#recording_menu_header_text
+{
+	font-size: 10vw;
+	font-family: arial;
+	font-weight: bold;
+	color: white;
+	position: relative;	
+	top: 40%;
+	left: 2%;	
+	float:left;
+	width: 100%;
+	height: 60%;
+}
+
+
+#current_recording
+{
+	position: relative;	
+	top: 5%;
+	left: 10%;
+	font-size: 9vw;
+	font-family: arial;
+	color: white;
+	float:left;
+	width: 90%;
+	height: 15%;
+	font-weight: bold;
+}
+
+
+
+#new_recording
+{
+	position: relative;	
+	top: 5%;
+	left: 10%;
+	font-size: 9vw;
+	font-family: arial;
+	color: white;
+	float:left;
+	width: 90%;
+	height: 15%;
+	font-weight: bold;
+}
+
+
+
+#saved_recording
+{
+	position: relative;	
+	top: 5%;
+	left: 10%;
+	font-size: 9vw;
+	font-family: arial;
+	color: white;
+	float:left;
+	width: 90%;
+	height: 15%;
+	font-weight: bold;
+}
+
+.slideout {
+	position: fixed;
+	top: 15%;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	padding: 0px;
+	margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	-webkit-touch-callout: none !important;
+	
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #111), color-stop(1, #333));	
+	background:-moz-linear-gradient(top, #111 5%, #333 100%);	
+	background:-webkit-linear-gradient(top, #111 5%, #333 100%);	
+	background:-o-linear-gradient(top, #111 5%, #333 100%);	
+	background:-ms-linear-gradient(top, #111 5%, #333 100%);	
+	background:linear-gradient(to bottom, #111 5%, #333 100%);	
+	-webkit-user-select: none !important; 
+}
+.slideout h3 {
+	position: relative;
+	top: 0%;
+	height: 14%;
+	border-bottom: 0.25vw solid #fff;
+	width: 100%;
+}
+
+.slideout_header_label
+{
+	position: relative;	
+	top: 40%;
+	left: 2%;	
+	color: #fff;
+	height: 18%;
+	width: 89%;
+	font-size: 9vw;
+	font-family: arial;
+	float:left;
+}
+
+#graph_label{
+	font-size: 6vw;
+}
+
+.slideout .toggle {
+	position: absolute;
+	top: 40%;
+	right: 1%;
+	height: 50%;
+	width: 10%;
+	font-size: 9vw;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	line-height: 1;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #29DD29), color-stop(1, #99DD99));	
+	background:-moz-linear-gradient(top, #29DD29 5%, #99DD99 100%);	
+	background:-webkit-linear-gradient(top, #29DD29 5%, #99DD99 100%);	
+	background:-o-linear-gradient(top, #29DD29 5%, #99DD99 100%);	
+	background:-ms-linear-gradient(top, #29DD29 5%, #99DD99 100%);	
+	background:linear-gradient(to bottom, #29DD29 5%, #99DD99 100%);
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	
+}
+
+.slideout .toggle:hover {
+	color: #fff;
+}
+
+.slideout ul {
+	list-style: none;		
+	position: relative;	
+	top: 0%;
+}
+
+.slideout ul li a {
+	position: relative;
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 10vw;
+	font-family: arial;
+}
+
+#new_recording_name_label
+{
+	position: relative;
+	top: 1%;	
+	font-size: 7vw;
+	color: #FFF;
+	left: 3%;
+	width: 25%;
+	font-family: arial;
+	float: left;
+}
+
+#new_recording_name_input
+{
+	position: relative;
+	top: 0%;
+	left: 5%;
+	width: 58%;
+	height: 6%;
+	font-size: 7vw;
+	font-family: arial;
+	text-align: right;
+	float: left;
+}
+
+#new_recording_start_button
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #29DD29), color-stop(1, #99DD99));	
+	background:-moz-linear-gradient(top, #29DD29 5%, #99DD99 100%);	
+	background:-webkit-linear-gradient(top, #29DD29 5%, #99DD99 100%);	
+	background:-o-linear-gradient(top, #29DD29 5%, #99DD99 100%);	
+	background:-ms-linear-gradient(top, #29DD29 5%, #99DD99 100%);	
+	background:linear-gradient(to bottom, #29DD29 5%, #99DD99 100%);
+	
+	position: relative;
+	top: 10%;
+	left: 65%;
+	width: 30%;
+	height: 10%;
+	font-size: 7vw;
+	font-family: arial;
+	padding: 0px;
+	float: left;
+}
+
+#new_recording_start_button:active
+{
+	top: 10.5%;
+}
+
+#current_recording_details
+{
+	position: relative;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 70%;	
+	
+}
+
+#current_recording_name_label
+{
+	position: relative;
+	top: 0%;
+	left: 3%;
+	width: 20%;
+	height: 12%;
+	font-size: 6vw;
+	font-family: arial;	
+	float: left;
+}
+
+#current_recording_name
+{
+	position: relative;
+	top: 0%;
+	left: 3%;
+	width: 70%;
+	height: 12%;
+	font-size: 9vw;
+	font-family: arial;
+	float: left;
+	text-align: right;
+}
+
+#current_recording_duration_label
+{
+	position: relative;
+	top: 0%;
+	left: 3%;
+	width: 20%;
+	height: 12%;
+	font-size: 6vw;
+	font-family: arial;
+	float: left;
+}
+#current_recording_duration	
+{
+	position: relative;
+	top: 0%;
+	left: 3%;
+	width: 70%;
+	height: 12%;
+	font-size: 9vw;
+	font-family: arial;
+	float: left;
+	text-align: right;
+}
+
+#current_recording_graph_button_div
+{
+	position: relative;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 15%;	
+	float: left;
+}
+
+#current_recording_graph_button
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #29DD29), color-stop(1, #99DD99));	
+	background:-moz-linear-gradient(top, #2929DD 5%, #9999DD 100%);	
+	background:-webkit-linear-gradient(top, #2929DD 5%, #9999DD 100%);	
+	background:-o-linear-gradient(top, #2929DD 5%, #9999DD 100%);	
+	background:-ms-linear-gradient(top, #2929DD 5%, #9999DD 100%);	
+	background:linear-gradient(to bottom, #2929DD 5%, #9999DD 100%);
+	
+	position: relative;
+	top: 10%;
+	left: 65%;
+	width: 30%;
+	height: 100%;
+	font-size: 7vw;
+	font-family: arial;
+	padding: 0px;
+	float: left;
+}
+
+#current_recording_graph_button:active
+{
+	top: 14%;
+}
+
+#current_recording_finish_button_div
+{
+	position: relative;
+	top: 5%;
+	left: 0%;
+	width: 100%;
+	height: 15%;	
+	float: left;
+}
+
+#current_recording_finish_button
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #29DD29), color-stop(1, #99DD99));	
+	background:-moz-linear-gradient(top, #29DD29 5%, #99DD99 100%);	
+	background:-webkit-linear-gradient(top, #29DD29 5%, #99DD99 100%);	
+	background:-o-linear-gradient(top, #29DD29 5%, #99DD99 100%);	
+	background:-ms-linear-gradient(top, #29DD29 5%, #99DD99 100%);	
+	background:linear-gradient(to bottom, #29DD29 5%, #99DD99 100%);
+	
+	position: relative;
+	top: 10%;
+	left: 65%;
+	width: 30%;
+	height: 100%;
+	font-size: 7vw;
+	font-family: arial;
+	padding: 0px;
+	float: left;
+}
+
+#current_recording_finish_button:active
+{
+	top: 14%;
+}
+
+#current_recording_delete_button_div
+{
+	position: relative;
+	top: 10%;
+	left: 0%;
+	width: 100%;
+	height: 15%;	
+	float: left;
+}
+
+#current_recording_delete_button
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #DD2929), color-stop(1, #DD9999));	
+	background:-moz-linear-gradient(top, #DD2929 5%, #DD9999 100%);	
+	background:-webkit-linear-gradient(top, #DD2929 5%, #DD9999 100%);	
+	background:-o-linear-gradient(top, #DD2929 5%, #DD9999 100%);	
+	background:-ms-linear-gradient(top, #DD2929 5%, #DD9999 100%);	
+	background:linear-gradient(to bottom, #DD2929 5%, #DD9999 100%);
+	
+	position: relative;
+	top: 10%;
+	left: 65%;
+	width: 30%;
+	height: 100%;
+	font-size: 7vw;
+	font-family: arial;
+	padding: 0px;
+	float: left;
+}
+
+
+#current_recording_delete_button:active
+{
+	top: 14%;
+}
+
+#no_current_recording
+{
+	position: absolute;
+	top: 20%;
+	left: 0%;
+	width: 100%;
+	height: 10%;
+	float: left;
+	visibility: hidden;
+}
+
+#no_current_recording_label
+{
+	position: relative;
+	top: 0%;
+	left: 28%;
+	width: 80%;
+	height: 100%;
+	font-size: 10vw;
+	font-family: arial;
+	float: left;
+}
+
+#saved_recording_details
+{
+	position: relative;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 70%;	
+	
+}
+
+#saved_recording_name_label
+{
+	position: relative;
+	top: 0%;
+	left: 3%;
+	width: 20%;
+	height: 12%;
+	font-size: 6vw;
+	font-family: arial;	
+	float: left;
+}
+
+#saved_recording_name
+{
+	position: relative;
+	top: 0%;
+	left: 3%;
+	width: 70%;
+	height: 12%;
+	font-size: 9vw;
+	font-family: arial;
+	float: left;
+	text-align: right;
+}
+
+#saved_recording_duration_label
+{
+	position: relative;
+	top: 0%;
+	left: 3%;
+	width: 20%;
+	height: 12%;
+	font-size: 6vw;
+	font-family: arial;
+	float: left;
+}
+#saved_recording_duration	
+{
+	position: relative;
+	top: 0%;
+	left: 3%;
+	width: 70%;
+	height: 12%;
+	font-size: 9vw;
+	font-family: arial;
+	float: left;
+	text-align: right;
+}
+
+#saved_recording_date_label
+{
+	position: relative;
+	top: 0%;
+	left: 3%;
+	width: 20%;
+	height: 12%;
+	font-size: 6vw;
+	font-family: arial;
+	float: left;
+}
+
+#saved_recording_date
+{
+	position: relative;
+	top: 0%;
+	left: 3%;
+	width: 70%;
+	height: 12%;
+	font-size: 9vw;
+	font-family: arial;
+	float: left;
+	text-align: right;
+}
+
+#saved_recording_graph_button_div
+{
+	position: relative;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 15%;	
+	float: left;
+}
+
+#saved_recording_graph_button
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #29DD29), color-stop(1, #99DD99));	
+	background:-moz-linear-gradient(top, #2929DD 5%, #9999DD 100%);	
+	background:-webkit-linear-gradient(top, #2929DD 5%, #9999DD 100%);	
+	background:-o-linear-gradient(top, #2929DD 5%, #9999DD 100%);	
+	background:-ms-linear-gradient(top, #2929DD 5%, #9999DD 100%);	
+	background:linear-gradient(to bottom, #2929DD 5%, #9999DD 100%);
+	
+	position: relative;
+	top: 0%;
+	left: 65%;
+	width: 30%;
+	height: 100%;
+	font-size: 7vw;
+	font-family: arial;
+	padding: 0px;
+	float: left;
+}
+
+#saved_recording_graph_button:active
+{
+	top: 4%;
+}
+
+
+
+#saved_recording_finish_button:active
+{
+	top: 14%;
+}
+
+#saved_recording_delete_button_div
+{
+	position: relative;
+	top: 5%;
+	left: 0%;
+	width: 100%;
+	height: 15%;	
+	float: left;
+}
+
+#saved_recording_delete_button
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #DD2929), color-stop(1, #DD9999));	
+	background:-moz-linear-gradient(top, #DD2929 5%, #DD9999 100%);	
+	background:-webkit-linear-gradient(top, #DD2929 5%, #DD9999 100%);	
+	background:-o-linear-gradient(top, #DD2929 5%, #DD9999 100%);	
+	background:-ms-linear-gradient(top, #DD2929 5%, #DD9999 100%);	
+	background:linear-gradient(to bottom, #DD2929 5%, #DD9999 100%);
+	
+	position: relative;
+	top: 10%;
+	left: 65%;
+	width: 30%;
+	height: 100%;
+	font-size: 7vw;
+	font-family: arial;
+	padding: 0px;
+	float: left;
+}
+
+
+#saved_recording_delete_button:active
+{
+	top: 14%;
+}
+
+
+#graph_container
+{
+	position: relative;
+	top: 0%;
+	left: 3%;
+	width: 95%;
+	height: 60%;
+	border: 1px solid white; 
+	float: left;
+		
+	font-size: 14px;
+	//line-height: 5em;
+}
+
+#graph_title
+{
+	position: relative;
+	top: -5%;
+	left: 0%;	
+	width: 100%;
+	height: 3%;	
+	float:left;
+	font-size: 8vw;
+	text-align: center;
+	
+}
+
+.demo-container {
+	position: relative;
+	top: 10%;
+	left: 5%;	
+	width: 85%;
+	height: 47%;
+	padding: 20px 15px 15px 15px;
+	//margin: 15px auto 30px auto;
+	border: 1px solid #ddd;	
+	float:left;
+}
+
+.flot-base{
+	overflow: hidden;
+}
+
+.demo-placeholder {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-size: 3vw;
+	line-height: 1.2em;
+	overflow:hidden;
+}
+
+#graph_legend
+{
+	position: relative;
+	top: 40%;
+	left: 35%;	
+	width: 60%;
+	height: 10%;
+	float:left;
+    -webkit-transform: scale(2);
+	transform: scale(2);
+	
+}
+
+#graph_legend .legendLabel
+{
+	font-size: 5vw;
+	color: white;
+}
+
+
+
+#confirm_yes_label
+{
+	position: relative;	
+	top: 0%;
+	left: 10%;
+	font-size: 9vw;
+	font-family: arial;
+	color: white;
+	float:left;
+	width: 90%;
+	height: 15%;
+	font-weight: bold;
+}
+
+#confirm_no_label
+{
+	position: relative;	
+	top: 0%;
+	left: 10%;
+	font-size: 9vw;
+	font-family: arial;
+	color: white;
+	float:left;
+	width: 90%;
+	height: 15%;
+	font-weight: bold;
+}
+

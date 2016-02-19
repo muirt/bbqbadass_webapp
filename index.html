@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=0"/>		
+	<link rel="stylesheet" type="text/css"  media='all  and (orientation:portrait)' href="badass.css" />
+	<link rel="stylesheet" type="text/css" media='all and (orientation:landscape)' href="badass-landscape.css" /> 
+</head>
+
+<body>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<script language="javascript" type="text/javascript" src="flot/jquery.flot.js"></script>
+	<script language="javascript" type="text/javascript" src="flot/jquery.flot.time.js"></script>
+	<script type="text/javascript" src="badass.js">	</script>  
+	
+	<!-- MENU SCREENS -->
+	
+	<div class="slideout" id="slideout_menu">
+		<h3>
+			<div  class="slideout_header_label">Menu</div> 
+			<a class="toggle"><</a>
+		</h3>
+		<ul>			
+			<li><a id="control-options">Control<i class="fa fa-angle-right"></i></a></li>
+			<li><a href="/smokernew/recording.html" id="recording-options">Recording<i class="fa fa-angle-right"></i></a></li>							
+		</ul>
+	</div>
+	
+	<div class="slideout" id="slideout_control_options">
+		<h3>
+			<div  class="slideout_header_label">Control</div> 
+			<a class="toggle"><</a>
+		</h3>	
+		<div class="slideout-control-hysteresis-label">Hysteresis (degrees)</div>
+		<input type="text" id="hysteresis_input" value="0"/>		
+	</div>
+	
+
+	<!-- MAIN SCREEN -->
+	<div id="header">
+		<div id="header_logo">BBQ Badass</div>
+		<button id="header_button"><span id="menu_button_text">Menu</span></button>			
+	</div>
+	
+	<div id="connected">
+		<div id="connected_label">Not Connected</div>
+	</div>
+	
+	<div id="connected_border">
+	 	<svg height="10" width="1100">
+  			<line x1="0" y1="5" x2="1100" y2="5" style="stroke:rgb(255,255,255);stroke-width:2" />
+		</svg> 
+	</div>
+	
+	<div id="current_temperatures">
+		<div id="current_temperatures_readouts_1_name">Meat Temperature</div>				
+		<div id="current_temperatures_readouts_1_temperature_value">0</div>
+		<div id="current_temperatures_readouts_1_degree_sign">o</div>
+		<div id="current_temperatures_readouts_1_temperature_unit">F</div>
+		<div id="temperature1_border">
+			<svg height="10" width="1100">
+				<line x1="0" y1="5" x2="1100" y2="5" style="stroke:rgb(255,255,255);stroke-width:2" />
+			</svg> 
+		</div>
+		<div id="current_temperatures_readouts_2_name">Grill Temperature</div>
+		<div id="current_temperatures_readouts_2_temperature_value">0</div>
+		<div id="current_temperatures_readouts_2_degree_sign">o</div>
+		<div id="current_temperatures_readouts_2_temperature_unit">F</div>
+		<div id="temperature2_border">
+			<svg height="10" width="1100">
+				<line x1="0" y1="5" x2="1100" y2="5" style="stroke:rgb(255,255,255);stroke-width:2" />
+			</svg> 
+		</div>					
+	</div>
+
+	<div id="output_control">
+   		<div id="output_control_set_point_label">Set Point</div>
+		<div id="output_control_set_point_value">0</div>
+		<div id="output_control_set_point_degree_sign">o</div>
+		<div id="output_control_set_point_unit">F</div>
+			
+		<button id="set_point_increase">+</button>
+		
+		<button id="set_point_decrease">-</button>						
+	</div>
+	
+	<div id="output_control_border">
+	 	<svg height="10" width="1100">
+  			<line x1="0" y1="5" x2="1100" y2="5" style="stroke:rgb(255,255,255);stroke-width:2" />
+		</svg> 
+	</div>
+	
+	<div id="fan_state">	
+		<div id="fan_label">Fan (Auto)</div> 		
+		<canvas id="output_state_graphic" width="100" height="100"></canvas>
+		<script>
+		  var canvas = document.getElementById("output_state_graphic");
+		  var context = canvas.getContext("2d");
+		  context.fillStyle = "#FF0000";
+		  context.arc(50, 50, 50, 0, Math.PI * 2, false);
+		  context.fill()
+		</script>
+		<button id="fan_control_auto">Auto</button>
+		<button id="fan_control_on">On</button>
+		<button id="fan_control_off">Off</button>
+		
+	</div>
+	
+	<div id="fan_state_border">
+	 	<svg height="10" width="1100">
+  			<line x1="0" y1="5" x2="1100" y2="5" style="stroke:rgb(255,255,255);stroke-width:2" />
+		</svg> 
+	</div>
+	<div id="cook_time">
+		<div id="cook_time_label">Cook Time</div>
+		<div id="cook_time_string">0h00m</div>				
+	</div>
+	
+	<div id="cook_time_border">
+	 	<svg height="10" width="1100">
+  			<line x1="0" y1="5" x2="1100" y2="5" style="stroke:rgb(255,255,255);stroke-width:2" />
+		</svg> 
+	</div>
+	
+	
+	<div id="debug_string"></div>
+</body>
+</html>
